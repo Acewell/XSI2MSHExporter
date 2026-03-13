@@ -1,0 +1,40 @@
+// XSI2MSHExporter.idl : IDL source for XSI2MSHExporter.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (XSI2MSHExporter.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+	[
+		object,
+		uuid(981F3049-4A3A-4eb4-9805-969C0321EDA7),
+		dual,
+		helpstring("IXSISceneExporter v3 Interface"),
+		pointer_default(unique)
+	]
+	interface IXSISceneExporter3 : IDispatch
+	{
+		[id(1), helpstring("method ExportScene")] HRESULT ExportScene(IDispatch *pProject, IDispatch *pScene);
+		[id(2), helpstring("method ExportSceneA")] HRESULT ExportSceneA(IDispatch *pProject, IDispatch *pScene, BSTR in_bstrDestFilename);
+	};
+
+[
+	uuid(D0736FBF-31FC-4332-A6DE-62644A987BB4),
+	version(1.0),
+	helpstring("XSI2MSHExporter v3 1.0 Type Library")
+]
+library XSI2MSHEXPORTER3Lib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	[
+		uuid(DF4BBAF6-280E-49d3-9CCD-A5A4CFE1E573),
+		helpstring("XSISceneExporter v3 Class")
+	]
+	coclass XSISceneExporter3
+	{
+		[default] interface IXSISceneExporter3;
+	};
+};

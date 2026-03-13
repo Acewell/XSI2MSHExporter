@@ -1,0 +1,26 @@
+HKCR
+{
+	XSI2MSHExporter3.XSISceneExporter3.1 = s 'XSISceneExporter3 Class'
+	{
+		CLSID = s '{DF4BBAF6-280E-49d3-9CCD-A5A4CFE1E573}'
+	}
+	XSI2MSHExporter3.XSISceneExporter3 = s 'XSISceneExporter3 Class'
+	{
+		CLSID = s '{DF4BBAF6-280E-49d3-9CCD-A5A4CFE1E573}'
+		CurVer = s 'XSI2MSHExporter3.XSISceneExporter3.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {DF4BBAF6-280E-49d3-9CCD-A5A4CFE1E573} = s 'XSISceneExporter3 Class'
+		{
+			ProgID = s 'XSI2MSHExporter3.XSISceneExporter3.1'
+			VersionIndependentProgID = s 'XSI2MSHExporter3.XSISceneExporter3'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{D0736FBF-31FC-4332-A6DE-62644A987BB4}'
+		}
+	}
+}
